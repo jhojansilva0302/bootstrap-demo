@@ -1,179 +1,331 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TRACK DAY</title>
 
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous"
+  />
+
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  />
+
+  <style>
+    /* === ESTILO DE COLORES=== */
+
+    body {
+      background: radial-gradient(circle at top, #0e1628 0%, #10182e 70%, #0a0f1f 100%);
+      color: #e6e6e6;
+      font-family: "Poppins", sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: linear-gradient(90deg, #141b2d, #1f2b4d);
+      border-bottom: 1px solid #00ff99;
+      box-shadow: 0 0 15px #00ff9960;
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: #00ffcc !important;
+      transition: 0.3s;
+    }
+
+    .nav-link:hover {
+      color: #00ffff !important;
+      text-shadow: 0 0 10px #00ffff;
+    }
+
+    /* Botones */
+    .btn,
+    .btn-primary,
+    .btn-success,
+    .btn-outline-primary {
+      background-color: #00ff99;
+      border-color: #00ff99;
+      color: #0a0f1f;
+      transition: 0.3s;
+    }
+
+    .btn:hover,
+    .btn-primary:hover,
+    .btn-success:hover,
+    .btn-outline-primary:hover {
+      background-color: #00ffff;
+      border-color: #00ffff;
+      box-shadow: 0 0 15px #00ffffaa;
+    }
+
+    /* Cards y contenedores */
+    .card {
+      background: linear-gradient(145deg, #1a2038, #222b4d);
+      color: #d9d9d9;
+      box-shadow: 0 0 20px #00ff9944;
+      border-radius: 10px;
+      border: none;
+    }
+
+    .container,
+    .carousel-inner {
+      color: #d9d9d9;
+    }
+
+    /* Títulos */
+    h1, h2, h3, h4, .card-title {
+      color: #00ffcc;
+      text-shadow: 0 0 10px #00ffcc77;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, #0a0f1f, #1a2442);
+      border-top: 1px solid #00ff99;
+      box-shadow: 0 -2px 25px #00ff9966;
+      padding: 40px 0;
+    }
+
+    footer a {
+      color: #00ffcc !important;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    footer a:hover {
+      color: #00ffff !important;
+      text-shadow: 0 0 10px #00ffff;
+    }
+
+    footer i.bi {
+      text-shadow: 0 0 8px #00ff99aa;
+      margin-right: 8px;
+    }
+
+    /* Carrusel */
+    .carousel-item img {
+      object-fit: cover;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #00ff9966;
+    }
+
+    /* Carrusel caption */
+    .carousel-caption h5,
+    .carousel-caption p {
+      color: #00ffcc;
+      text-shadow: 0 0 12px #00ffff;
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- menu -->
-    <header id="top">
-        <nav class="navbar navbar-expand-sm bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Jhojan</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">cursos</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                tutoriales
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">contactos</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
-    </header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">TRACK DAY</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <!-- carrusel -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">INICIO</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">CURSOS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">PRECIOS</a></li>
+          <li class="nav-item"><a class="nav-link disabled" aria-disabled="true">CONTACTO</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <div id="carouselExampleIndicators" class="carousel slide">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active" style=max-height 500px;>
-                <img src="https://tse1.mm.bing.net/th/id/OIP.gXXJkcAqOQuovyxsEXGf3wHaEK?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3"
-                    class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item" style=max-height 500px;>
-                <img src="https://th.bing.com/th/id/R.6ac50650da2d2ce1e5d789bbeca63be4?rik=NSOMKObJwcjXEg&pid=ImgRaw&r=0"
-                    class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item" style=max-height 500px;>
-                <img src="https://tse2.mm.bing.net/th/id/OIP.p_1qBmPchCcnxuX4IO6bJQHaE8?cb=12&w=1440&h=960&rs=1&pid=ImgDetMain&o=7&rm=3"
-                    class="d-block w-100" alt="...">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button> 
+  <!-- Carrusel -->
+  <div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
     </div>
 
-    <!--imagenes -->
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="max-height: 500px;">
+        <img src="https://autodromodetocancipa.com/wp-content/uploads/2022/02/1988-1.png"
+          class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" style="max-height: 500px;">
+        <img src="https://autodromodetocancipa.com/wp-content/uploads/2022/02/CNA.png"
+          class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" style="max-height: 500px;">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.MiIAFDWfTRz0Uz28U03rvAHaEo?cb=12ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3"
+          class="d-block w-100" alt="...">
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <!-- Clients Section -->
     <div class="container-fluid bg-succes-subtitle py-4 text.center ">
         <div class=" row">
-            <div class=" col-6 col-md-4 col-lg-2 "> <img src="img/clients-1.webp" style="max-width: 80px " alt="...">
+            <div class=" col-6 col-md-4 col-lg-2 "> <img src="https://wallpaperaccess.com/full/136217.jpg" style="max-width: 80px " alt="...">
             </div>
-            <div class=" col-6 col-md-4 col-lg-2 "> <img src="img/clients-3.webp" style="max-width: 80px " alt="...">
+            <div class=" col-6 col-md-4 col-lg-2 "> <img src="https://i.pinimg.com/originals/aa/78/b5/aa78b588e617d3aa9d25fbb387f02345.png" style="max-width: 80px " alt="...">
             </div>
-            <div class=" col-6 col-md-4 col-lg-2 "> <img src="img/clients-6.webp" style="max-width: 80px " alt="...">
+            <div class=" col-6 col-md-4 col-lg-2 "> <img src="https://wallpaperaccess.com/full/1766866.jpg" style="max-width: 80px " alt="...">
             </div>
-            <div class=" col-6 col-md-4 col-lg-2 "> <img src="img/clients-7.webp" style="max-width: 80px " alt="...">
+            <div class=" col-6 col-md-4 col-lg-2 "> <img src="https://tse3.mm.bing.net/th/id/OIP.AFNxEdtHVFTPtCn-_R5mOgHaCA?cb=12ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" style="max-width: 80px " alt="...">
             </div>
-            <div class=" col-6 col-md-4 col-lg-2 "> <img src="img/clients-1.webp" style="max-width: 80px " alt="...">
+            <div class=" col-6 col-md-4 col-lg-2 "> <img src="https://thvnext.bing.com/th/id/OIP.CtvNS_n1WEoz_lZ7T776OQHaGB?w=233&h=190&c=7&r=0&o=7&cb=12&dpr=1.3&pid=1.7&rm=3&ucfimg=1" style="max-width: 80px " alt="...">
             </div>
-            <div class=" col-6 col-md-4 col-lg-2 "> <img src="img/clients-1.webp" style="max-width: 80px " alt="...">
+            <div class=" col-6 col-md-4 col-lg-2 "> <img src="https://tse3.mm.bing.net/th/id/OIP.HUAtNVB38RuXYoKuMXhNwAHaEo?cb=12ucfimg=1&w=1920&h=1200&rs=1&pid=ImgDetMain&o=7&rm=3" style="max-width: 80px " alt="...">
             </div>
 
         </div>
     </div>
-
-
-
-    <!--acerca de -->
+ <!--acerca de -->
     <div class="container mt-5 ">
 
     <h2 class="text-center"> ACERCA DE</h2>
     <div class="row">
-            <div class="col"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo nesciunt voluptates ea
-                doloribus sit vel veritatis repudiandae asperiores cupiditate exercitationem? Blanditiis optio officia
-                placeat! Dolorum asperiores omnis optio molestias fugiat.</div>
+            <div class="col"> Los <strong>Track Days Tocancipá</strong> son jornadas diseñadas para todos los amantes de la velocidad que desean vivir la experiencia de rodar en un circuito profesional, con todas las medidas de seguridad y acompañamiento técnico necesario.
+    <br><br>
+    Aquí podrás mejorar tus habilidades de conducción, conocer pilotos de toda Colombia y disfrutar de un ambiente lleno de adrenalina, pasión y respeto por el motociclismo deportivo.</div>
 
-            <div class="col"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo nesciunt voluptates ea
-                doloribus sit vel veritatis repudiandae asperiores cupiditate exercitationem? Blanditiis optio officia
-                placeat! Dolorum asperiores omnis optio molestias fugiat.</div>
+            <div class="col">Nuestro objetivo es fomentar una cultura de manejo responsable dentro y fuera del autódromo. Contamos con categorías para todos los niveles —desde principiantes hasta avanzados— y con instructores certificados que te ayudarán a dominar cada curva.
+    <br><br></div>
 
-            <button type="button" class="btn btn-outline-primary" disabled> Primary button </button>
+            <button type="button" class="btn btn-outline-primary" disabled> Agenda tu cupo </button>
     </div>
     </div>
     </div>
+  <!-- Cards Section -->
+  <div class="container mt-5">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://s3.us-east-2.amazonaws.com/mgpanel/8282-top-5-pilitos-motogp-mundialcars-FZB.jpg" class="card-img-top rounded-circle" alt="...">
+        <div class="card-body text-center">
+          <h5 class="card-title">Experiencia en pista</h5>
+          <p class="card-text">Vive la emoción de rodar en el Autódromo de Tocancipá con cronometraje, zonas de seguridad y acompañamiento profesional. 
+Ideal para probar tu moto al máximo sin los riesgos de la vía pública.</p>
+          <a href="#" class="btn btn-primary">Ver más...</a>
+        </div>
+      </div>
+    </div>
 
-    <!--Tarjetas -->
-    <div class="container mt-5">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.gseV1zyfzkygvo6T1xr4rAHaE9?cb=12ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3s" class="card-img-top rounded-circle" alt="...">
+        <div class="card-body text-center">
+          <h5 class="card-title">Entrenamiento y seguridad</h5>
+          <p class="card-text">Aprende técnicas de frenado, trazado de curvas, control de aceleración y posición corporal con pilotos expertos.
+Cada sesión incluye charla técnica y asistencia en pista.</p>
+          <a href="#" class="btn btn-primary">Ver más...</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.X3MSI2F4ohCiqiS45wjkoQHaEV?cb=12ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" class="card-img-top rounded-circle" alt="...">
+        <div class="card-body text-center">
+          <h5 class="card-title">Comunidad motera</h5>
+          <p class="card-text">Forma parte de una comunidad apasionada por las motos, el respeto y la seguridad. 
+Conoce nuevos amigos, comparte experiencias y participa en eventos exclusivos de Track Days.</p>
+          <a href="#" class="btn btn-primary">Ver más...</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Extra Card Section -->
+<div class="container mt-5">
+  <div class="card mb-3 border-0" style="max-width: 100%;">
+    <div class="row g-0 align-items-center">
+      <div class="col-md-5">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.HJPw3a1rxEs_X8VSaDTbXgHaHw?cb=12ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" class="img-fluid rounded-start" alt="Cursos SENA">
+      </div>
+
+      <div class="col-md-7 p-4">
+        <h3 class="fw-bold">Sebastian Herrer</h3>
+        <p class="card-text mb-4">
+          A participado en las dos ultimas validas de el GP Colombia y es unop de nuestros pilotos más reconocidos.
+        </p>
+        <button class="btn btn-success px-4 py-2">CERTIFICATE</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container mt-5">
+  <div class="card mb-3 border-0" style="max-width: 100%;">
+    <div class="row g-0 align-items-center">
+      <div class="col-md-7 p-4">
+        <h3 class="fw-bold">Alfoncito linares</h3>
+        <p class="card-text mb-4">
+          Es un piloto colombiano que ha triunfado tanto en mexico como en Colombia y es unos de los mejores y tiene muchas posibilidades de convertirse en el mejor, el tambien ha participado en las dos ultimas validas de el GP Colombia.
+        </p>
+        <button class="btn btn-success px-4 py-2">CERTIFICATE</button>
+      </div>
+      <div class="col-md-5">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.a09BnUIDULiv5cp4B6N3kAHaE8?cb=12ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" class="img-fluid rounded-end" alt="Cursos SENA">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <!-- Footer -->
+  <footer class="container-fluid text-center">
     <div class="row">
-        <div class="col-md-4">
-            <div class="card">
-                <img src="https://s3.us-east-2.amazonaws.com/mgpanel/8282-top-5-pilitos-motogp-mundialcars-FZB.jpg" class="card-img-top rounded-circle" alt="..."> 
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example tex to build on the card title and make up the bulk of the cards content.</p>
-                <a href="#" class="btn btn-primary"> Go somehere</a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <img src="https://mundo-pilotos.com/wp-content/uploads/2023/01/lorenzo-833726_1920-1.jpg" class="card-img-top rounded-circle" alt="..."> 
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example tex to build on the card title and make up the bulk of the cards content.</p>
-                <a href="#" class="btn btn-primary"> Go somehere</a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <img src="https://www.mundodeportivo.com/files/og_thumbnail/uploads/2023/02/04/63de50519ffee.jpeg" class="card-img-top rounded-circle" alt="..."> 
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example tex to build on the card title and make up the bulk of the cards content.</p>
-                <a href="#" class="btn btn-primary"> Go somehere</a>
-                </div>
-            </div>
-        </div>
-    
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+      <div class="col">
+        <a href="#" class="text-decoration-none">
+          <i class="bi bi-journal-code"></i> ESTAMOS UBICADOS EN
+        </a>
+      </div>
+      <div class="col">
+        <a href="#" class="text-decoration-none">
+          <i class="bi bi-laptop"></i>TRAEMOS TU VEHICLO
+        </a>
+      </div>
+      <div class="col">
+        <a href="#" class="text-decoration-none">
+          <i class="bi bi-cloud-arrow-down"></i> LISTA DE PRECIOS
+        </a>
+      </div>
+      <div class="col">
+        <a href="#" class="text-decoration-none">
+          <i class="bi bi-envelope"></i> CONTACTOS
+        </a>
+      </div>
+    </div>
+  </footer>
 
-
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 
 </body>
-
 </html>
