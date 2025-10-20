@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acerca de - Track Days Tocancipá</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Iconos -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Estilo principal -->
+  <style>
+    /* === ESTILO  === */
+    body {
+      background: radial-gradient(circle at top, #120101 0%, #1a0000 60%, #0a0000 100%);
+      color: #f2eaea;
+      font-family: "Poppins", sans-serif;
+      overflow-x: hidden;
+    }
+
+    .navbar {
+      background: linear-gradient(90deg, #1a0000, #2b0a0a);
+      border-bottom: 1px solid #ff3300;
+      box-shadow: 0 0 20px #ff330060;
+    }
+
+    .navbar-brand, .nav-link {
+      color: #ff4d00 !important;
+      transition: 0.3s;
+    }
+
+    .nav-link:hover {
+      color: #ff6600 !important;
+      text-shadow: 0 0 10px #ff6600;
+    }
+
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+      filter: brightness(0.35) saturate(1.3);
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 50% 50%, rgba(255, 51, 0, 0.15), rgba(0, 0, 0, 0.85));
+      z-index: -1;
+      animation: glowShift 8s ease-in-out infinite;
+    }
+
+    @keyframes glowShift {
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 1; }
+    }
+
+    /* Texto y cards */
+    h1, h2, h3, h4 {
+      color: #ff3300;
+      text-shadow: 0 0 15px #ff660088;
+      animation: glowPulse 3s ease-in-out infinite;
+    }
+
+    @keyframes glowPulse {
+      0% { text-shadow: 0 0 10px #ff660044; }
+      50% { text-shadow: 0 0 20px #ff9933aa; }
+      100% { text-shadow: 0 0 10px #ff660044; }
+    }
+
+    .about-section {
+      padding: 100px 0;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .about-section p {
+      font-size: 1.1rem;
+      color: #e0d0c0;
+      line-height: 1.8;
+      margin-bottom: 30px;
+      text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    }
+
+    .highlight {
+      color: #ff6600;
+      font-weight: 600;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #200000, #300000);
+      color: #f2eaea;
+      box-shadow: 0 0 20px #ff330044;
+      border-radius: 10px;
+      border: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px #ff4500aa;
+    }
+
+    footer {
+      background: linear-gradient(135deg, #100000, #220000);
+      border-top: 1px solid #ff3300;
+      box-shadow: 0 -2px 25px #ff330066;
+      padding: 40px 0;
+      z-index: 2;
+      position: relative;
+    }
+
+    footer a {
+      color: #ff6600 !important;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    footer a:hover {
+      color: #ffaa33 !important;
+      text-shadow: 0 0 10px #ffaa33;
+    }
+
+    footer i.bi {
+      text-shadow: 0 0 8px #ff3300aa;
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Video de fondo -->
+  <video autoplay muted loop playsinline class="video-background">
+    <source src="video-fondo.mp4" type="video/mp4">
+  </video>
+  <div class="overlay"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Track Days Tocancipá</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="acerca.html">Acerca de</a></li>
+          <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+          <li class="nav-item"><a class="nav-link" href="contactos.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="reglamentos.html">Reglamento</a></li>
+          <li class="nav-item"><a class="nav-link" href="inscripciones.html">Inscripción</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sección Acerca de -->
+  <section class="about-section container">
+    <h1>Sobre Track Days Tocancipá</h1>
+    <p>
+      <span class="highlight">Track Days Tocancipá</span> nació de la pasión por las motos, la velocidad y la seguridad en pista. 
+      Nuestro objetivo es brindar un espacio donde los amantes del motociclismo puedan disfrutar de su máquina 
+      al máximo, de manera controlada y profesional.
+    </p>
+    <p>
+      Organizamos jornadas en el <span class="highlight">Autódromo de Tocancipá</span> que combinan adrenalina, aprendizaje 
+      y compañerismo. Aquí no se trata solo de correr: se trata de crecer como piloto, compartir experiencias 
+      y vivir la emoción de un verdadero día de pista.
+    </p>
+    <p>
+      Con apoyo de instructores experimentados y una comunidad apasionada, promovemos la conducción responsable, 
+      la técnica correcta y el respeto por la velocidad. 
+    </p>
+
+    <div class="row mt-5">
+      <div class="col-md-4">
+        <div class="card p-4">
+          <h3>Misión</h3>
+          <p>Ofrecer experiencias seguras, emocionantes y formativas para todos los niveles de pilotos en el Autódromo de Tocancipá.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4">
+          <h3>Visión</h3>
+          <p>Ser el evento de referencia para los apasionados del motociclismo en Colombia, promoviendo el talento y la seguridad vial deportiva.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4">
+          <h3>Valores</h3>
+          <p>Pasión, respeto, compromiso, aprendizaje y unión son el motor que impulsa cada jornada de Track Days.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center mt-5">
+    <div class="container">
+      <p>Síguenos en nuestras redes</p>
+      <p>
+        <a href="https://www.facebook.com/profile.php?id=100042065741853"><i class="bi bi-facebook"></i> Facebook</a> |
+        <a href="https://www.instagram.com/ridepro_academy/"><i class="bi bi-instagram"></i> Instagram</a> |
+        <a href="https://www.youtube.com/@RIDEPRORidepro"><i class="bi bi-youtube"></i> YouTube</a>
+      </p>
+      <p class="mt-3">&copy; 2025 Track Days Tocancipá - Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

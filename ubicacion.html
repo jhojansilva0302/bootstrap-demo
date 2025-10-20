@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ubicación | Jhojan Racing - Autódromo de Tocancipá</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- === ESTILO  === -->
+  <style>
+    body {
+      background: radial-gradient(circle at top, #120101 0%, #1a0000 60%, #0a0000 100%);
+      color: #f2eaea;
+      font-family: "Poppins", sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: linear-gradient(90deg, #1a0000, #2b0a0a);
+      border-bottom: 1px solid #ff3300;
+      box-shadow: 0 0 20px #ff330060;
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: #ff4d00 !important;
+      transition: 0.3s;
+    }
+
+    .nav-link:hover {
+      color: #ff6600 !important;
+      text-shadow: 0 0 10px #ff6600;
+    }
+
+    /* Títulos */
+    h1, h2, h3, h4 {
+      color: #ff3300;
+      text-shadow: 0 0 15px #ff660088;
+      animation: glowPulse 3s ease-in-out infinite;
+    }
+
+    @keyframes glowPulse {
+      0% { text-shadow: 0 0 10px #ff660044; }
+      50% { text-shadow: 0 0 20px #ff9933aa; }
+      100% { text-shadow: 0 0 10px #ff660044; }
+    }
+
+    /* Mapa */
+    .map-container {
+      border: 3px solid #ff3300;
+      border-radius: 15px;
+      box-shadow: 0 0 25px #ff330088;
+      overflow: hidden;
+      height: 450px;
+    }
+
+    /* Sección de información */
+    .info-section {
+      background: linear-gradient(145deg, #200000, #300000);
+      border-radius: 15px;
+      padding: 30px;
+      margin-top: 40px;
+      box-shadow: 0 0 25px #ff450066;
+    }
+
+    .info-section p {
+      line-height: 1.8;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, #100000, #220000);
+      border-top: 1px solid #ff3300;
+      box-shadow: 0 -2px 25px #ff330066;
+      padding: 40px 0;
+    }
+
+    footer a {
+      color: #ff6600 !important;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    footer a:hover {
+      color: #ffaa33 !important;
+      text-shadow: 0 0 10px #ffaa33;
+    }
+
+    footer i.bi {
+      text-shadow: 0 0 8px #ff3300aa;
+      margin-right: 8px;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 50% 50%, rgba(255, 68, 0, 0.05), rgba(0, 0, 0, 0.95));
+      z-index: -1;
+      animation: bgPulse 8s ease-in-out infinite;
+    }
+
+    @keyframes bgPulse {
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Jhojan Racing</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="acerca.html">Acerca de</a></li>
+          <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
+          <li class="nav-item"><a class="nav-link active" href="galeria.html">Galería</a></li>
+          <li class="nav-item"><a class="nav-link" href="contactos.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="reglamentos.html">Reglamento</a></li>
+          <li class="nav-item"><a class="nav-link" href="inscripciones.html">Inscripción</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Título -->
+  <div class="container text-center mt-5">
+    <h1>📍 Ubicación - Autódromo de Tocancipá</h1>
+    <p class="lead">Conoce el punto exacto donde la pasión por la velocidad cobra vida.</p>
+  </div>
+
+  <!-- Mapa -->
+  <div class="container mt-4">
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.090018165871!2d-73.97808922576567!3d4.960319639368938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f87f97a1e5e41%3A0xf4975e0b6c97a622!2sAut%C3%B3dromo%20de%20Tocancip%C3%A1!5e0!3m2!1ses!2sco!4v1739876543210!5m2!1ses!2sco"
+        width="100%"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+
+  <!-- Información e indicaciones -->
+  <div class="container info-section mt-5">
+    <h2>🚦 Cómo llegar al Autódromo</h2>
+    <p>
+      El Autódromo de Tocancipá está ubicado a unos <strong>40 minutos al norte de Bogotá</strong>, en el municipio de Tocancipá, Cundinamarca.  
+      Puedes llegar fácilmente por la <strong>Autopista Norte</strong>, tomando la salida hacia el Parque Jaime Duque y siguiendo la vía pavimentada hasta la entrada del autódromo.
+    </p>
+
+    <h3>🚘 Entrada principal</h3>
+    <p>
+      La entrada está justo frente al <strong>Parque Jaime Duque</strong>. Al pasar el peaje, verás la señalización del autódromo y la vía de acceso.  
+      Contamos con personal de logística que te guiará hacia las zonas de ingreso dependiendo del tipo de evento.
+    </p>
+
+    <h3>🅿️ Parqueaderos</h3>
+    <p>
+      Disponemos de <strong>amplias zonas de parqueo</strong> para autos, motos y vehículos de transporte de equipos.  
+      Los parqueaderos están vigilados y organizados por áreas para mayor comodidad y seguridad.  
+      Además, hay espacios reservados para pilotos, competidores y personal técnico.
+    </p>
+
+    <h3>🚌 Transporte público</h3>
+    <p>
+      Si vienes desde Bogotá, puedes tomar un bus hacia <strong>Tocancipá</strong> desde el portal Norte o desde el paradero del Éxito de la 170.  
+      Pide que te dejen en el <strong>Parque Jaime Duque</strong>; desde allí, el autódromo queda a menos de 10 minutos caminando.
+    </p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center mt-5">
+    <div class="container">
+      <p>&copy; 2025 <strong>Jhojan Racing</strong>. Todos los derechos reservados.</p>
+      <div>
+        <a href="https://www.facebook.com/profile.php?id=100042065741853"><i class="bi bi-facebook"></i> Facebook</a> |
+        <a href="https://www.instagram.com/ridepro_academy/"><i class="bi bi-instagram"></i> Instagram</a> |
+        <a href="https://www.youtube.com/@RIDEPRORidepro"><i class="bi bi-youtube"></i> YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

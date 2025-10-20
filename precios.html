@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Precios | Jhojan Racing - Track Days Tocancipá</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- === ESTILO  === -->
+  <style>
+    body {
+      background: radial-gradient(circle at top, #120101 0%, #1a0000 60%, #0a0000 100%);
+      color: #f2eaea;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .navbar {
+      background: linear-gradient(90deg, #1a0000, #2b0a0a);
+      border-bottom: 1px solid #ff3300;
+      box-shadow: 0 0 20px #ff330060;
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: #ff4d00 !important;
+      transition: 0.3s;
+    }
+
+
+
+    .nav-link:hover {
+      color: #ff6600 !important;
+      text-shadow: 0 0 10px #ff6600;
+    }
+
+    h1, h2, h3 {
+      color: #ff3300;
+      text-shadow: 0 0 15px #ff660088;
+      animation: glowPulse 3s ease-in-out infinite;
+    }
+
+    @keyframes glowPulse {
+      0% { text-shadow: 0 0 10px #ff660044; }
+      50% { text-shadow: 0 0 20px #ff9933aa; }
+      100% { text-shadow: 0 0 10px #ff660044; }
+    }
+
+    .price-card {
+      background: linear-gradient(145deg, #200000, #300000);
+      border-radius: 15px;
+      padding: 30px;
+      color: #fff;
+      box-shadow: 0 0 25px #ff450066;
+      transition: 0.4s;
+      border: 1px solid #ff3300;
+    }
+
+    .price-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 35px #ff660099;
+    }
+
+    .price-card h3 {
+      color: #ff6600;
+    }
+
+    .price {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ff3300;
+    }
+
+    .btn {
+      background-color: #ff3300;
+      border-color: #ff3300;
+      color: #fff;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #ff6600;
+      box-shadow: 0 0 15px #ff6600aa;
+    }
+
+    footer {
+      background: linear-gradient(135deg, #100000, #220000);
+      border-top: 1px solid #ff3300;
+      box-shadow: 0 -2px 25px #ff330066;
+      padding: 40px 0;
+    }
+
+    footer a {
+      color: #ff6600 !important;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    footer a:hover {
+      color: #ffaa33 !important;
+      text-shadow: 0 0 10px #ffaa33;
+    }
+
+    footer i.bi {
+      text-shadow: 0 0 8px #ff3300aa;
+      margin-right: 8px;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 50% 50%, rgba(255, 68, 0, 0.05), rgba(0, 0, 0, 0.95));
+      z-index: -1;
+      animation: bgPulse 8s ease-in-out infinite;
+    }
+
+    @keyframes bgPulse {
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Jhojan Racing</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="acerca.html">Acerca de</a></li>
+          <li class="nav-item"><a class="nav-link" href="ubicacion.html">Ubicación</a></li>
+          <li class="nav-item"><a class="nav-link" href="transporte.html">Transporte</a></li>
+          <li class="nav-item"><a class="nav-link active" href="precios.html">Precios</a></li>
+          <li class="nav-item"><a class="nav-link" href="contactos.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Encabezado -->
+  <div class="container text-center mt-5">
+    <h1>🏁 Paquetes y Precios</h1>
+    <p class="lead">Elige tu experiencia en pista y disfruta del mejor servicio en el Autódromo de Tocancipá.</p>
+  </div>
+
+  <!-- Paquetes -->
+  <div class="container mt-5">
+    <div class="row g-4">
+      <!-- Básico -->
+      <div class="col-md-4">
+        <div class="price-card text-center">
+          <h3>🏍️ Paquete Básico</h3>
+          <p class="price">$250.000 COP</p>
+          <ul class="list-unstyled">
+            <li>✔ Ingreso a pista por 3 sesiones</li>
+            <li>✔ Cronometraje básico</li>
+            <li>✔ Zona de descanso compartida</li>
+            <li>✔ Asesoría técnica general</li>
+          </ul>
+          <a href="contacto.html" class="btn mt-3">Agendar Cupo</a>
+        </div>
+      </div>
+
+      <!-- Intermedio -->
+      <div class="col-md-4">
+        <div class="price-card text-center">
+          <h3>🔥 Paquete Intermedio</h3>
+          <p class="price">$350.000 COP</p>
+          <ul class="list-unstyled">
+            <li>✔ Ingreso a pista por 5 sesiones</li>
+            <li>✔ Cronometraje profesional</li>
+            <li>✔ Zona de descanso individual</li>
+            <li>✔ Análisis de desempeño</li>
+            <li>✔ Refrigerio y bebida energética</li>
+          </ul>
+          <a href="contacto.html" class="btn mt-3">Agendar Cupo</a>
+        </div>
+      </div>
+
+      <!-- Pro -->
+      <div class="col-md-4">
+        <div class="price-card text-center">
+          <h3>🏆 Paquete Pro</h3>
+          <p class="price">$480.000 COP</p>
+          <ul class="list-unstyled">
+            <li>✔ Ingreso ilimitado a pista</li>
+            <li>✔ Cronometraje con telemetría</li>
+            <li>✔ Zona VIP con carpa privada</li>
+            <li>✔ Análisis en video y coaching</li>
+            <li>✔ Almuerzo y bebida premium</li>
+            <li>✔ Descuento en transporte</li>
+          </ul>
+          <a href="contacto.html" class="btn mt-3">Agendar Cupo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Alquiler de Equipos -->
+  <div class="container mt-5">
+    <h2 class="text-center">🧤 Alquiler de Equipos</h2>
+    <div class="row g-4 mt-4">
+      <div class="col-md-4">
+        <div class="price-card text-center">
+          <h3>Monotraje</h3>
+          <p class="price">$100.000 COP</p>
+          <p>Incluye limpieza y ajuste de tallas (S a XL).</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="price-card text-center">
+          <h3>Casco Integral</h3>
+          <p class="price">$50.000 COP</p>
+          <p>Certificados DOT / ECE. Limpieza interna incluida.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="price-card text-center">
+          <h3>Guantes y Botas</h3>
+          <p class="price">$30.000 COP</p>
+          <p>Equipo completo de protección con refuerzos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Entradas al público -->
+  <div class="container mt-5">
+    <h2 class="text-center">🎟️ Entradas para Espectadores</h2>
+    <div class="row g-4 mt-4">
+      <div class="col-md-4">
+        <div class="price-card text-center">
+          <h3>General</h3>
+          <p class="price">$20.000 COP</p>
+          <p>Acceso a gradas y zonas de exhibición.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="price-card text-center">
+          <h3>VIP Paddock</h3>
+          <p class="price">$40.000 COP</p>
+          <p>Acceso a paddock, carpas y zona de comida exclusiva.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="price-card text-center">
+          <h3>Full Experience</h3>
+          <p class="price">$70.000 COP</p>
+          <p>Incluye entrada VIP + vuelta de reconocimiento con piloto.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ofertas -->
+  <div class="container mt-5 mb-5">
+    <h2 class="text-center">🔥 Ofertas del Día</h2>
+    <div class="price-card mt-4 text-center">
+      <h3>Combo Piloto + Monotraje</h3>
+      <p class="price">$320.000 COP</p>
+      <p>Participa en el paquete básico y recibe el alquiler del monotraje GRATIS.</p>
+      <a href="contactos.html" class="btn mt-3">Aprovechar Oferta</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center mt-5">
+    <div class="container">
+      <p>&copy; 2025 <strong>Jhojan Racing</strong>. Todos los derechos reservados.</p>
+      <div>
+        <a href="https://www.facebook.com/profile.php?id=100042065741853"><i class="bi bi-facebook"></i> Facebook</a> |
+        <a href="https://www.instagram.com/ridepro_academy/"><i class="bi bi-instagram"></i> Instagram</a> |
+        <a href="https://www.youtube.com/@RIDEPRORidepro"><i class="bi bi-youtube"></i> YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
